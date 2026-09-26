@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <!-- TÍTULO EN BARRA SUPERIOR -->
+    <ion-title>
+      Galería de Fotos - Actividad 4
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Galería de Fotos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- CONTENEDOR EN REJILLA: Muestra de manera responsiva las imágenes tomadas -->
+  <ion-grid>
+    <ion-row>
+      <!-- Itera sobre el arreglo de fotos del servicio para pintar cada imagen -->
+      <ion-col size="6" *ngFor="let photo of photoService.photos">
+        <ion-card style="margin: 0;">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- BOTÓN FLOTANTE (FAB): Ubicado en la parte inferior central para accionar la cámara -->
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button (click)="photoService.addNewToGallery()" color="success">
+      <ion-icon name="camera"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
