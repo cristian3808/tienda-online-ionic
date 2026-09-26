@@ -1,20 +1,16 @@
-import { IonicModule } from '@ionic/angular/lazy';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Tab1Page } from './tab1.page';
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
-
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import { Tab1Page } from './tab1.page';
 
 @NgModule({
   imports: [
-    IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+    Tab1Page // Importado aquí de forma obligatoria por ser un componente standalone
   ],
-  declarations: [Tab1Page]
+  declarations: [] // Se mantiene completamente vacío para evitar el error NG6008
 })
 export class Tab1PageModule {}

@@ -1,32 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="primary">
-    <ion-title>Autenticación JWT - Tienda Online</ion-title>
+    <ion-title>Autenticación JWT - Tienda</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <div class="ion-padding" style="margin-top: 20px;">
+  <div class="ion-padding" style="margin-top: 30px;">
     
     <div class="ion-text-center ion-margin-bottom">
-      <ion-icon name="person-circle-outline" style="font-size: 80px; color: var(--ion-color-primary);"></ion-icon>
-      <h2>Iniciar Sesión</h2>
-      <p>Accede para gestionar tu carrito de compras y pedidos</p>
+      <ion-icon name="person-circle-outline" style="font-size: 90px; color: var(--ion-color-primary);"></ion-icon>
+      <h2 style="font-weight: bold; margin-top: 10px;">Iniciar Sesión</h2>
+      <p style="color: #666; font-size: 14px;">Accede con tus credenciales para gestionar tu cuenta</p>
     </div>
 
-    <!-- Formulario de Credenciales Obligatorio por la Guía -->
-    <ion-item class="ion-margin-bottom">
+    <!-- Campos del Formulario de Autenticación -->
+    <ion-item class="ion-margin-bottom" style="--border-radius: 8px;">
       <ion-input label="Usuario / Correo" labelPlacement="floating" type="email" placeholder="ejemplo@ucompensar.edu.co"></ion-input>
     </ion-item>
 
-    <ion-item class="ion-margin-bottom">
+    <ion-item class="ion-margin-bottom" style="--border-radius: 8px;">
       <ion-input label="Contraseña" labelPlacement="floating" type="password" placeholder="********"></ion-input>
     </ion-item>
 
-    <!-- Botón de Envío e Interacción -->
-    <ion-button expand="block" class="ion-margin-top" color="primary">
-      <ion-icon name="log-in-outline" slot="start"></ion-icon>
-      Ingresar (Generar Token JWT)
-    </ion-button>
+    <!-- Botón de Envío -->
+    <div class="ion-margin-top" style="margin-top: 25px;">
+      <ion-button expand="block" color="primary" style="font-weight: bold; height: 45px;">
+        <ion-icon name="log-in-outline" slot="start"></ion-icon>
+        Ingresar (Generar Token JWT)
+      </ion-button>
+    </div>
 
   </div>
 </ion-content>

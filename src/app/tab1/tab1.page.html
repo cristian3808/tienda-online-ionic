@@ -1,17 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Tienda Online - UCompensar</ion-title>
   </ion-toolbar>
-</ion-header>
+</header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div class="ion-padding">
+    <h2 style="font-weight: bold; margin-bottom: 15px;">Catálogo de Productos</h2>
+    
+    <!-- Tarjeta del Producto para Evidencia de la API y Carrito -->
+    <ion-card style="margin: 0 0 20px 0; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
+      <!-- 📷 Dimensiones reducidas a 180px y object-fit adaptado para que la zapatilla quepa completa -->
+      <div style="text-align: center; background-color: #f7f7f7; padding: 10px 0;">
+        <img alt="Zapatillas Deportivas" src="https://img.kwcdn.com/product/Fancyalgo/VirtualModelMatting/477751c61124fa5c01e9742989d7dddc.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp" style="height: 180px; max-width: 100%; object-fit: contain;" />
+      </div>
+      
+      <ion-card-header>
+        <ion-card-title style="font-size: 20px; font-weight: bold;">Calzado Deportivo Running Pro</ion-card-title>
+        <ion-card-subtitle style="color: var(--ion-color-success); font-size: 18px; font-weight: 600; margin-top: 5px;">
+          $249.900 COP
+        </ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content style="color: #666;">
+        Diseño híbrido optimizado con amortiguación de alta tecnología. Ideal para entrenamientos diarios y pruebas de rendimiento.
+      </ion-card-content>
+      <div class="ion-padding-horizontal ion-padding-bottom">
+        <!-- Evento de clic configurado correctamente -->
+        <ion-button expand="block" color="success" style="font-weight: bold;" (click)="comprar()">
+          <ion-icon name="cart-outline" slot="start"></ion-icon>
+          AGREGAR AL CARRITO
+        </ion-button>
+      </div>
+    </ion-card>
+  </div>
 </ion-content>
